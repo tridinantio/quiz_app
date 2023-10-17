@@ -12,7 +12,11 @@ class SearchAndSortHeader extends StatelessWidget {
     return Row(
       children: [
         InkWell(
-          onTap: () => context.read<TopicCubit>().sortTopic(),
+          onTap: () {
+            if (searchWordController.text.isEmpty) {
+              context.read<TopicCubit>().sortTopic();
+            }
+          },
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: Icon(

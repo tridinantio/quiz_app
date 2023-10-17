@@ -26,20 +26,10 @@ class HomePage extends StatelessWidget {
             Center(
               child: SizedBox(
                 width: double.maxFinite,
-                child: Lottie.asset(
-                  'assets/home_lottie.json',
-                ),
+                child:
+                    Lottie.asset('assets/home_lottie.json', fit: BoxFit.cover),
               ),
             ),
-            // const Center(
-            //   child: SizedBox(
-            //     child: Icon(
-            //       Icons.lightbulb,
-            //       color: Color.fromARGB(255, 245, 225, 48),
-            //       size: 200,
-            //     ),
-            //   ),
-            // ),
             const SizedBox(
               height: 20,
             ),
